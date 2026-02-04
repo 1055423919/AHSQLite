@@ -14,3 +14,5 @@ FOUNDATION_EXPORT double AHSQLiteVersionNumber;
 FOUNDATION_EXPORT const unsigned char AHSQLiteVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AHSQLite/PublicHeader.h>
+#import "AHSQLiteManager.h"
+#import "NSObject+AHSQLiteAuto.h"
