@@ -71,6 +71,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// NSArray *arr = @[model1, model2, model3];
 /// [TTListInfoModel sql_saveBatch:@"TimeTunnelList" models:arr];
 + (BOOL)sql_saveBatch:(NSString *)tableName models:(NSArray<NSObject *> *)models;
+
+#pragma mark --清除全部表数据
+/// 清空并删除表（只需表名）
++ (BOOL)sql_cleanAll:(NSString *)tableName;
 @end
 
 NS_ASSUME_NONNULL_END

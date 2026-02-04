@@ -80,7 +80,26 @@
     }
     return YES;
 }
+- (BOOL)cleanTable:(NSString *)tableName {
+    if (tableName.length == 0) return NO;
 
+    NSString *sql =
+    [NSString stringWithFormat:@"DROP TABLE IF EXISTS %@", tableName];
+
+    char *errmsg = NULL;
+    int result = sqlite3_exec(self.db, sql.UTF8String, NULL, NULL, &errmsg);
+
+    if (result != SQLITE_OK) {
+        if (errmsg) {
+            NSLog(@" cleanTable error: %s", errmsg);
+            sqlite3_free(errmsg);
+        }
+        return NO;
+    }
+
+    NSLog(@" from: %@ clean and delete", tableName);
+    return YES;
+}
 @end
 
 @implementation NSObject (AHSQLiteAuto)
@@ -276,5 +295,10 @@
     }
     
     return [[AHSQLiteManager shared] executeBatchSQL:sqls];
+}
+
+#pragma mark --清除全部表数据
++ (BOOL)sql_cleanAll:(NSString *)tableName {
+    return [[AHSQLiteManager shared] cleanTable:tableName];
 }
 @end

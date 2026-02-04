@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AHSQLite'
-  s.version          = '1.0.0'
+  s.version          = '1.0.2'
   s.summary          = '轻量级 Objective-C SQLite ORM 框架'
 
   s.description      = <<-DESC

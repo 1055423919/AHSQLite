@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 批量插入对象数组到表
 - (BOOL)executeBatchSQL:(NSArray<NSString *> *)sqls;
+
+/// 清空并删除指定表
+- (BOOL)cleanTable:(NSString *)tableName;
 @end
 
 NS_ASSUME_NONNULL_END
