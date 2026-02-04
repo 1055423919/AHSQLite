@@ -28,8 +28,7 @@ pod 'AHSQLite'
 2.安装：
 pod install
 
-
-## 手动导入
+### 手动导入
 
 1.下载 AHSQLite 仓库
 
@@ -44,17 +43,25 @@ pod install
 ## 创建模型
 
 @interface TTListInfoModel : NSObject
+
 @property (nonatomic, copy) NSString *identifer;
+
 @property (nonatomic, copy) NSString *content;
+
 @property (nonatomic, assign) NSInteger age;
+
 @end
 
 ## 保存对象
 
 TTListInfoModel *model = [[TTListInfoModel alloc] init];
+
 model.identifer = @"001";
+
 model.content = @"测试内容";
+
 model.age = 18;
+
 [model sql_save:@"TimeTunnelList"];
 
 ## 查询所有数据
