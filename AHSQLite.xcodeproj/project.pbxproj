@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0B0456242F32F5000052A868 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0B0456232F32F4F00052A868 /* LICENSE */; };
+		0B04567B2F32FB4C0052A868 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B04567A2F32FB4C0052A868 /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0B0455482F32D7E80052A868 /* AHSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AHSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0456232F32F4F00052A868 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0B04567A2F32FB4C0052A868 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B04567B2F32FB4C0052A868 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +53,9 @@
 		0B04553E2F32D7E80052A868 = {
 			isa = PBXGroup;
 			children = (
+				0B0456232F32F4F00052A868 /* LICENSE */,
 				0B04554A2F32D7E80052A868 /* AHSQLite */,
+				0B0456792F32FB4C0052A868 /* Frameworks */,
 				0B0455492F32D7E80052A868 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +66,14 @@
 				0B0455482F32D7E80052A868 /* AHSQLite.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0B0456792F32FB4C0052A868 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B04567A2F32FB4C0052A868 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +123,7 @@
 				TargetAttributes = {
 					0B0455472F32D7E80052A868 = {
 						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
 					};
 				};
 			};
@@ -132,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0456242F32F5000052A868 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +171,7 @@
 		0B0455512F32D7E80052A868 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -173,6 +194,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -180,6 +203,7 @@
 		0B0455522F32D7E80052A868 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -202,6 +226,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
